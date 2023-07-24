@@ -1,0 +1,253 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using MyProject.Models
+@model List<Question>
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English Exam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="https://th.bing.com/th/id/R.38c6b8de76e26071a1b760e2668b7d06?rik=cKtsLkuw0TvjtA&pid=ImgRaw&r=0" alt="Logo" height="30" /></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+            <style>
+                .navbar-nav {
+                    display: flex;
+                    list-style: none;
+                }
+
+                .nav-item {
+                    margin-right: 10px;
+                }
+
+                .nav-link {
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    transition: all 0.3s ease;
+                    background-color: #007bff;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+
+                    .nav-link:hover {
+                        background-color: #0062cc;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+                        transform: translateY(-2px);
+                    }
+            </style>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-3">
+        <style>
+            .jss48 {
+                width: 100%;
+                position: relative;
+            }
+
+            .jss36 {
+                width: 100%;
+                position: relative;
+            }
+
+
+            .jss51 {
+                z-index: -1;
+            }
+
+            .jss60 {
+                top: 0;
+                width: 100%;
+                position: absolute;
+            }
+
+            .jss61 {
+                top: 0;
+                right: 15%;
+                z-index: -2;
+                position: absolute;
+            }
+
+            .jss62 {
+                top: 11%;
+                left: 0;
+                z-index: -2;
+                position: absolute;
+            }
+
+            .jss63 {
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+            }
+
+            .jss50 {
+                z-index: -1;
+            }
+
+            .jss55 {
+                width: 100%;
+                position: absolute;
+            }
+
+            .jss56 {
+                top: 1%;
+                right: 0;
+                width: 100%;
+                position: absolute;
+            }
+
+            .jss57 {
+                top: 30%;
+                right: 0;
+                position: absolute;
+            }
+
+            .jss58 {
+                top: 45%;
+                left: 0;
+                position: absolute;
+            }
+
+            .jss59 {
+                left: 0;
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+            }
+
+            .jss49 {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                max-width: 655px;
+                padding-top: 240px;
+                padding-left: 48px;
+                padding-right: 48px;
+                flex-direction: column;
+            }
+
+            .jss52 {
+                width: 100%;
+                margin-bottom: 108px;
+            }
+
+            .jss53 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .MuiTypography-root {
+                margin: 0;
+            }
+
+            .MuiTypography-h2 {
+                font-size: 40px;
+                font-family: EFCircular,Arial,sans-serif;
+                font-weight: bold;
+                line-height: 1.2;
+            }
+
+            .jss54 {
+                display: flex;
+                margin-bottom: 72px;
+            }
+
+            .jss64 {
+                max-width: 230px;
+            }
+
+            .jss65 {
+                margin-bottom: 16px;
+            }
+
+            .jss66 {
+                margin-bottom: 8px;
+            }
+
+            .MuiTypography-h4 {
+                font-size: 24px;
+                font-family: EFCircular,Arial,sans-serif;
+                font-weight: bold;
+                line-height: 1.235;
+            }
+
+            .MuiTypography-body1 {
+                font-size: 16px;
+                font-family: EFCircular,Arial,sans-serif;
+                font-weight: normal;
+                line-height: 1.5;
+            }
+
+        </style>
+
+        <div class="jss48" data-test="section-two">
+            <div class="jss36">
+                <img src="//a.storyblok.com/f/71234/1200x254/ac0e50b195/top-badge-section-two.svg" alt="topBadge" class="jss51 jss60"><img src="//a.storyblok.com/f/71234/392x388/3db0e5f95b/right-badge-section-two.svg" alt="rightBadge" class="jss51 jss61"><img src="//a.storyblok.com/f/71234/266x532/474ffaf093/left-badge-section-two.svg" alt="leftBadge" class="jss51 jss62"><img src="//a.storyblok.com/f/71234/1200x255/6f2747348a/bottom-badge-section-two.svg" alt="bottomBadge" class="jss51 jss63"><img src="//a.storyblok.com/f/71234/369x107/34835a85cf/mobile-top-badge.svg" class="jss50 jss55" alt="mobileTopBadge"><img src="//a.storyblok.com/f/71234/357x327/4c14f884eb/mobile-right-badge-one.svg" class="jss50 jss56" alt="mobileRightBadgeOne"><img src="//a.storyblok.com/f/71234/164x423/c01ae32783/mobile-right-badge-two.svg" alt="mobileRightBadgeTwo" class="jss50 jss57"><img src="//a.storyblok.com/f/71234/139x374/3223c20d07/mobile-left-badge.svg" alt="mobileLeftBadge" class="jss50 jss58"><img src="//a.storyblok.com/f/71234/375x147/f6f3c7c972/mobile-bottom-badge.svg" alt="mobileBottomBadge" class="jss50 jss59">
+                <div class="jss49">
+                    <div class="jss52"><h2 class="MuiTypography-root MuiTypography-h2"><span>Tại sao nên làm bài kiểm tra EF SET?</span></h2></div><div class="jss53">
+                        <div class="jss54"><div class="jss64"><div class="jss65"><img src="//a.storyblok.com/f/71234/32x33/2dd9a91916/shield-icon.svg" alt="infoIcon"></div><h4 class="MuiTypography-root jss66 MuiTypography-h4">Đáng tin cậy</h4><p class="MuiTypography-root MuiTypography-body1"><span>Được tạo nên bởi những chuyên gia. EF SET được phát triển hơn 5 năm qua với những nhà khoa học hàng đầu trong lĩnh vực ngôn ngữ Anh. </span><span><a href="https://www.efset.org/vi/about/" style="text-decoration:underline" rel="noopener">Tìm hiểu thêm</a></span><span>.</span></p></div></div><div class="jss54"><div class="jss64"><div class="jss65"><img src="//a.storyblok.com/f/71234/47x32/9890bc01b2/phone-icon.svg" alt="infoIcon"></div><h4 class="MuiTypography-root jss66 MuiTypography-h4">Dễ tiếp cận</h4><p class="MuiTypography-root MuiTypography-body1"><span>Kiểm tra trên mọi thiết bị. EF SET có trên tất cả máy tính, tablet, điện thoại. Tất cả thứ bạn cần là đường truyền trực tuyến và chưa tới một giờ đồng hồ để làm bài kiểm tra.</span></p></div></div><div class="jss54">
+                            <div class="jss64">
+                                <div class="jss65"><img src="//a.storyblok.com/f/71234/30x30/e23916f3d1/gift-icon.svg" alt="infoIcon"></div><h4 class="MuiTypography-root jss66 MuiTypography-h4">Miễn phí</h4>
+                                <p class="MuiTypography-root MuiTypography-body1">
+                                    <span>Tại sao phải trả tiền cho kết quả chính xác? Không nên có rào cản nào để nhận được bảng điểm có độ tin cậy - những bước đi đầu tiên trong hành trình học ngoại ngữ.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="bg-light mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Contact us at:</p>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
