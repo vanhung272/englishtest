@@ -90,35 +90,55 @@ namespace WebApplication9.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Submitted(int questionId, int answerId)
+        public IActionResult Submitted(Dictionary<int, int> answers)
         {
+            if (answers == null || !answers.Any())
+            {
+                // Handle the case where no answers were submitted
+                return RedirectToAction("Index");
+            }
+
+            int totalScore = 0;
+
             using (ProjectContext context = new ProjectContext())
             {
-                var answer = context.Answers.FirstOrDefault(a => a.AnswerId == answerId);
-                if (answer != null && answer.IsCorrect)
+                foreach (var questionId in answers.Keys)
                 {
-                    // Tăng điểm số của người dùng nếu đáp án đúng
-                    HttpContext.Session.SetInt32($"score_{questionId}", 1);
-                }
-                else
-                {
-                    // Đặt điểm số của người dùng về 0 nếu đáp án sai hoặc không tìm thấy đáp án
-                    HttpContext.Session.SetInt32($"score_{questionId}", 0);
-                }
+                    int selectedAnswerId = answers[questionId];
+                    var question = context.Questions.FirstOrDefault(q => q.QuestionId == questionId);
 
-                // Tính tổng điểm số của người dùng cho tất cả các câu hỏi
-                int totalScore = 0;
-                foreach (var question in context.Questions)
-                {
-                    int? score = HttpContext.Session.GetInt32($"score_{question.QuestionId}");
-                    if (score.HasValue)
+                    if (question != null)
                     {
-                        totalScore += score.Value;
-                    }
-                }
+                        var correctAnswer = context.Answers.FirstOrDefault(a => a.AnswerId == selectedAnswerId && a.IsCorrect);
 
-                return Json(totalScore);
+                        if (correctAnswer != null)
+                        {
+                            totalScore++;
+                        }
+                    }
+                    //List<Question> questions = context.Questions.ToList();
+                    //questions.Add 
+                }
+                var result = new Result
+                {
+                    UserId = 1,
+                    ExamId = 4,
+                    TotalScore = totalScore, 
+                    StartTime = DateTime.UtcNow,
+                    EndTime = DateTime.UtcNow
+                };
+                context.Results.Add(result);
+                context.SaveChanges();
             }
+           
+            // return score to quizview
+            var resultModel = new Result { TotalScore = totalScore  };
+            return  RedirectToAction("QuizResult", resultModel);
+        }
+
+        public IActionResult QuizResult(Result resultModel)
+        {
+            return View(resultModel);
         }
         public IActionResult LogOut()
         {

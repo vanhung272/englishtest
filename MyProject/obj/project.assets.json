@@ -1971,19 +1971,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DHA - VANHUNGNGUYEN\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS-PRO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DHA - VANHUNGNGUYEN\\Downloads\\MyProject\\MyProject\\MyProject\\MyProject.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS-PRO\\Source\\Repos\\englishtest\\MyProject\\MyProject.csproj",
       "projectName": "MyProject",
-      "projectPath": "C:\\Users\\DHA - VANHUNGNGUYEN\\Downloads\\MyProject\\MyProject\\MyProject\\MyProject.csproj",
-      "packagesPath": "C:\\Users\\DHA - VANHUNGNGUYEN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DHA - VANHUNGNGUYEN\\Downloads\\MyProject\\MyProject\\MyProject\\obj\\",
+      "projectPath": "C:\\Users\\ASUS-PRO\\Source\\Repos\\englishtest\\MyProject\\MyProject.csproj",
+      "packagesPath": "C:\\Users\\ASUS-PRO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS-PRO\\Source\\Repos\\englishtest\\MyProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DHA - VANHUNGNGUYEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS-PRO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2039,7 +2039,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
