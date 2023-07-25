@@ -1,9 +1,90 @@
-﻿@model MyProject.Models.Result
+﻿@model MyProject.Models.ResultViewModel
 
-<h2>Result</h2>
+<!DOCTYPE html>
+<html>
+<head>
 
-<p><strong>Your Score:</strong> @Model.TotalScore</p>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#avatar").click(function () {
+                $("#dropdown").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Your Total Score: @Model.TotalScore</h1>
+    <h2>List of Questions:</h2>
 
+    @*@foreach (var question in Model.Questions)
+    {
+    <li>
+    @question.QuestionContent
+    @if (Model.SelectedAnswers.ContainsKey(question.QuestionId))
+    {
+    if (Model.SelectedAnswers[question.QuestionId])
+    {
+    <span style="color: green;">[Correct]</span>
+    }
+    else
+    {
+    <span style="color: red;">[Wrong]</span>
+    }
+    }
+    </li>
+    }*@
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <hr />
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="question-col">Question</th>
+                            <th class="answers-col">Answers</th>
+                        </tr>
+                    </thead>
+                    @foreach (var question in Model.Questions)
+                    {
+                        <tr>
+                            <td class="question-col">@question.QuestionContent</td>
+                            <td class="answers-col">
+                                <ul>
+                                    @foreach (var answer in question.Answers)
+                                    {
+                                        var isSelectedAnswer = Model.SelectedAnswers.ContainsKey(question.QuestionId) && Model.SelectedAnswers[question.QuestionId] == answer.AnswerId;
+                                        var isCorrectAnswer = answer.IsCorrect;
+                                        <li>
+                                            <input class="form-check-input" type="radio" name="answers[@question.QuestionId]" value="@answer.AnswerId" @(isCorrectAnswer ? "checked" : "")>
+                                            <label class="form-check-label @( isCorrectAnswer ? "text-success" : "")">
+                                                @answer.AnswerContent
+                                            </label>
+                                        </li>
+                                    }
+                                </ul>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .question-col {
+        width: 60%;
+    }
 
+    .answers-col {
+        width: 40%;
+    }
+</style>
+</html>
 
-@* Add any other information or details you want to display about the exam and user here. *@

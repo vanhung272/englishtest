@@ -14,6 +14,5 @@ namespace MyProject.Models
 
         public virtual Exam Exam { get; set; }
         public virtual User User { get; set; }
-       // public List<Question> Questions { get; set; }
     }
 }

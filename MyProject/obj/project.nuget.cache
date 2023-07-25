@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7RiDGGdWwpmeOAxQFIREh/XtaYWon28J3TPmZThvtLY4NukA2I4XR6C4/KI3E1xwARMErBujbjQaNc2r6vbxbA==",
+  "dgSpecHash": "wTkA5Gq5qjtsgWommSNUrjB5NlSLgX59xCD9fFuSU/wXLluzML6w+hAN8kFTToJ2lnU26lE6El6IE38+BhmAWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS-PRO\\Source\\Repos\\englishtest\\MyProject\\MyProject.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\ASUS-PRO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS-PRO\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

@@ -138,6 +138,7 @@ C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\Microsoft.
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\ASUS-PRO\Source\Repos\englishtest\MyProject\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
